@@ -125,7 +125,7 @@ spec:
  restartPolicy: Never
  containers:
  - name: pytorch-con
-   image: pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
+   image: pytorch/pytorch:2.1.1-cuda12.1-cudnn8-devel
    command: ["python3"]
    args: ["/mnt/ceph_rbd/example_pytorch_code.py"]
    volumeMounts:
@@ -192,7 +192,7 @@ spec:
    restartPolicy: Never
    containers:
    - name: pytorch-con
-     image: pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
+     image: pytorch/pytorch:2.1.1-cuda12.1-cudnn8-devel
      command: ["python3"]
      args: ["/mnt/ceph_rbd/example_pytorch_code.py"]
      volumeMounts:
@@ -221,5 +221,5 @@ kubectl delete pod pytorch-pod
 
 kubectl delete pod pytorch-job
 
-kubectl delete pv pytorch-pvc
+kubectl delete pvc pytorch-pvc
 ```
